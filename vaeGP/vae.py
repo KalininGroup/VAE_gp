@@ -229,7 +229,7 @@ def VAE(dataset,
   """
 
   if lvae_range is not None:
-    scaler = MinMaxScaler(feature_range=lvae_range)
+    scaler = MinMaxScaler(feature_range=lvae_range)# only scales the compostion
     y_dataset = scaler.fit_transform(y_dataset[:,np.newaxis]).squeeze()
 
   in_sh = norm_data.shape[1:]
