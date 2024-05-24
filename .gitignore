@@ -163,3 +163,5 @@ cython_debug/
 WTV_VAE_GP_Simulation.ipynb
 WTV_VAE_BO_v1.ipynb
 WTV_AG/
+
+*.pkl

@@ -1,5 +1,6 @@
-#@title Linear VAE class
-
+#####
+# It bulds the VAE class and further defines a custom vae function to use the vae model
+#####
 import tensorflow as tf
 from tensorflow.keras.models import Model
 from tensorflow.keras import backend as K
@@ -13,6 +14,10 @@ def normalize(data):
   return [np.min(data),np.ptp(data)], (data - np.min(data))/(np.ptp(data))
 
 class CustomVAE(Model):
+    """
+    Custom VAE model with custom loss function.
+    
+    """
     def __init__(self, encoder, decoder, image_size, **kwargs):
         super(CustomVAE, self).__init__(**kwargs)
         self.encoder = encoder
